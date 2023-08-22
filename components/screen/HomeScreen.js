@@ -1,16 +1,23 @@
 import React from "react";
-import {View, Text, Image, StyleSheet} from 'react-native';
+import {View, Text, Image, StyleSheet, SafeAreaView} from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
 import { images } from "../../styles/GlobalImg";
 
 function HomeScreen() {
     return (
-      <View style={styles.hero}>
+    <SafeAreaView>
+        <View style={styles.hero}>
         <Image
           source={images.homeImages.flag_chairDesign}
         style={styles.image} />
         <Text style={styles.title}>LIB Vote Wise</Text>
       </View>
+
+      <View style={styles.textView}>
+        <Text style={styles.welcomeText}>Welcome to the 'Future' of Liberians</Text>
+      </View>
+    </SafeAreaView>
+     
     );
   }
   const styles = StyleSheet.create({
@@ -34,6 +41,16 @@ function HomeScreen() {
       height: 150,
       resizeMode: 'cover', // or other image resizeMode mode
     },
+    welcomeText: {
+      fontSize: 40,
+      // textAlign: 'left'
+    },
+    textView:{
+      width: 350,
+      justifyContent: 'center',
+      marginLeft: 30,
+      marginTop: 50
+    }
    
   });
 

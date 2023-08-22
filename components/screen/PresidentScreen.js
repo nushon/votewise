@@ -143,6 +143,7 @@ const Item = ({name, party, image}) =>(
 function PresidentsScreen() {
     return (
      <SafeAreaView style={styles.container}>
+      {/* <StatusBar hidden/> */}
       <FlatList 
         data={Data}
         renderItem={({item}) => <Item image={item.image} name={item.name} party={item.party} />}

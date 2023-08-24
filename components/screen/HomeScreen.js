@@ -7,26 +7,36 @@ import FontAwesome from '@expo/vector-icons/FontAwesome';
 
 const Data = [
   {
+    title: "Parties",
+    number: "46"
+  },
+  {
+    title: "Precincts",
+    number: "2,080"
+  },
+  {
+    title: "Polling Places",
+    number: "5,890"
+  },
+   {
     title: "Voters",
-    number: "10,000",
-    icon: "group"
+    number: "2,471,617"
   },
   {
     title: "Male",
-    number: "5,000",
-    icon: "male"
+    number: "1,234,360"
   },
   {
     title: "Female",
-    number: "5,000",
-    icon: "female"
-  }
+    number: "1,237,257"
+  },
+  
 ]
 
-const Item = ({title, number, icon}) =>{
+const Item = ({title, number}) =>{
   return(
     <View style={styles.voterStats}>
-        <Text style={styles.votersTitle}>{title} <FontAwesome name={icon} color='#c0032c' size={23} /></Text>
+        <Text style={styles.votersTitle}>{title}</Text>
         <Text style={styles.votersNumber}>{number}</Text>
     </View>
   )
@@ -44,13 +54,13 @@ function HomeScreen() {
           </View>
 
           <View style={styles.textView}>
-            <Text style={styles.welcomeText}>Be a part of the <Text style={styles.futureText}>'Future Liberia'</Text> we want and dream of</Text>
+            <Text style={styles.welcomeText}>Be a part of the <Text style={styles.futureText}>Future Liberia</Text> we want and dream of.</Text>
           </View>
 
           <View style ={styles.votersStatsView}>
             {Data.map((item, index) => (
               <View key={index}>
-                <Item title={item.title} icon={item.icon} number={item.number}/>
+                <Item title={item.title} number={item.number}/>
               </View>
             ))
             }
@@ -58,7 +68,8 @@ function HomeScreen() {
           <View style={styles.newsView}>
             <Text style={styles.textTitle}>Recent elections news.</Text>
             <View>
-              <Image  source={images.homeImages.electionBanner}/>
+              <Image style={styles.newsHeadlineImage}  source={images.homeImages.electionBanner}/>
+              <Text style={styles.newsHeadlineText}>October 10, 2023 is Election day.</Text>
             </View>
           </View>
         </ScrollView>
@@ -72,12 +83,12 @@ function HomeScreen() {
       flexDirection: 'row', 
       justifyContent: 'center',
       alignItems: 'center',
-      marginTop: 30
+      // marginTop: 3
     },
     title: {
-      fontSize: 33,
+      fontSize: 30,
       color: '#002368',
-      fontWeight: 30,
+      fontWeight: '500',
       // marginLeft: 10,
       marginBottom: 50
     },
@@ -95,10 +106,11 @@ function HomeScreen() {
       width: 350,
       justifyContent: 'center',
       marginLeft: 35,
-      // marginTop: 30
+      marginTop: 30
     },
     futureText:{
-      color:'#c0032c'
+      color:'#c0032c',
+      fontWeight: '600'
     },
     // Voters FlatList Styles 
     voterStats:{
@@ -110,37 +122,49 @@ function HomeScreen() {
       elevation: 4,
       backgroundColor: 'white',
       padding: 10,
-      // marginVertical: 10,
+      marginVertical: 10,
       marginHorizontal: 4,
       borderRadius: 8,
       // flexDirection: 'row',   
     },
     votersStatsView:{
       flexDirection: 'row',
-      marginTop: 30,
+      flexWrap: 'wrap',
+      marginTop: 40,
       justifyContent: 'center'
     },
     votersTitle: {
-      fontSize: 24,
-      textAlign: 'center'
+      fontSize: 15,
+      textAlign: 'center',
+      color: '#002368',
+      fontWeight: '700'
+
 
     },
     votersNumber:{
-      fontSize: 24,
-      textAlign: 'center'
+      fontSize: 22,
+      textAlign: 'center',
+      color: '#c0032c',
+      fontWeight: '500'
     },
     // News View 
     newsView:{
       alignItems: 'center',
-      marginTop: 30
+      marginTop: 50
     },
     textTitle: {
       fontSize: 22
     },
     newsHeadlineImage:{
-      width: 50,
-      height: 50,
-      resizeMode: 'cover'
+      width: 500,
+      height: 400,
+      resizeMode: 'cover',
+      marginRight: 70
+    },
+    newsHeadlineText:{
+      fontSize: 25,
+      textAlign: 'center',
+      marginBottom: 80
     }
     
   });

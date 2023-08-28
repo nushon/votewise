@@ -5,7 +5,7 @@ import {Text, StyleSheet, SafeAreaView, SectionList} from 'react-native';
 // import { Data } from "../data/SenatorsData";
 import SelectDropdown from "react-native-select-dropdown";
 
-const counties = ["Bomi", "Bong"];
+const counties = ["Bomi", "Bong", 'Gbarpolu', 'Grand Bassa', 'Grand Cape Mount', 'Grand Gedeh', 'Grand Kru', 'Lofa', 'Margibi', 'Maryland', 'Montserrado', 'Nimba', 'Rivercess', 'River Gee', 'Sinoe', ];
 
 //  const ListView = ({list})=>(
 //   <TouchableOpacity>

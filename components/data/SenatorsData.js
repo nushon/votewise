@@ -1,5 +1,5 @@
 import React from "react"
-const SenatorsData = [
+const Data = 
     {
         "bomi": [
             {
@@ -13,7 +13,7 @@ const SenatorsData = [
             },
         ]
     }
-]
+// console.log(SenatorsData.bomi.aspirant)
 //             {
 //                 aspirant: "Murphy M. Gibson",
 //                 "photo": "",
@@ -919,4 +919,4 @@ const SenatorsData = [
 //     }
     
 // ]
-export default SenatorsData;
+export default Data;

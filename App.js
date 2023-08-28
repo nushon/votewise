@@ -25,11 +25,11 @@ export default function App() {
             if (route.name === 'Home') {
               iconName = focused ? 'home' : 'home';
               
-            } else if (route.name === 'Presidents') {
+            } else if (route.name === 'Presidential') {
               iconName = focused ? 'user' : 'user';
-            } else if (route.name === 'Senators') {
+            } else if (route.name === 'Senatorial') {
               iconName = focused ? 'users' : 'users';
-            } else if (route.name === 'Representatives') {
+            } else if (route.name === 'Representative') {
               iconName = focused ? 'users' : 'users';
             }
             // <FontAwesomeIcon icon="fa-solid fa-user-tie" />
@@ -41,9 +41,9 @@ export default function App() {
         })}
       >
         <Tab.Screen name="Home" component={HomeScreen} />
-        <Tab.Screen name="Presidents" component={PresidentsScreen}/>
-        <Tab.Screen name="Senators" component={SenatorsScreen} />
-        <Tab.Screen name="Representatives" component={RepScreen} />
+        <Tab.Screen name="Presidential" component={PresidentsScreen}/>
+        <Tab.Screen name="Senatorial" component={SenatorsScreen} />
+        <Tab.Screen name="Representative" component={RepScreen} />
         
       </Tab.Navigator>
     </NavigationContainer>

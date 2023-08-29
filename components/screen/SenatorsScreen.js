@@ -1,9 +1,10 @@
 import React from "react";
-import {Text, StyleSheet, SafeAreaView, SectionList} from 'react-native';
+import {Text, StyleSheet, SafeAreaView} from 'react-native';
 // import { NavigationContainer } from '@react-navigation/native';
 // import { SenatorsData } from "../data/SenatorsData";
-// import { Data } from "../data/SenatorsData";
+import { Data } from "../data/SenatorsData.js";
 import SelectDropdown from "react-native-select-dropdown";
+import FontAwesome from '@expo/vector-icons/FontAwesome';
 
 const counties = ["Bomi", "Bong", 'Gbarpolu', 'Grand Bassa', 'Grand Cape Mount', 'Grand Gedeh', 'Grand Kru', 'Lofa', 'Margibi', 'Maryland', 'Montserrado', 'Nimba', 'Rivercess', 'River Gee', 'Sinoe', ];
 
@@ -14,40 +15,49 @@ const counties = ["Bomi", "Bong", 'Gbarpolu', 'Grand Bassa', 'Grand Cape Mount',
 // )
     
 
-// const Senators = ({name, party, image}) => (
-//   <View style= {styles.list}>
-//     <Image style={styles.image} source={image} />
-//     <View style={styles.infoCard}>
-//       <Text style= {styles.name}>{name}</Text>
-//       <Text style={styles.party}>{party}</Text>
-//     </View>
+const Senators = ({name, party, image}) => (
+  <View style= {styles.list}>
+    <Image style={styles.image} source={image} />
+    <View style={styles.infoCard}>
+      <Text style= {styles.name}>{name}</Text>
+      <Text style={styles.party}>{party}</Text>
+    </View>
     
-//   </View>
-// ) 
+  </View>
+) 
 
 function SenatorsScreen() {
    
     return (
       <SafeAreaView>
         <SelectDropdown 
+          style={styles.dropdownListTitle}
           data={counties}
-          onSelect = {(selectedItem) =>(
-            <Text>{selectedItem}</Text>
-          )
-           }
+          onSelect = {(selectedItem) =>{
+           console.log("This is the data: ", Data);
+           <Text>{selectedItem}</Text>
+          }}
+            
+          buttonTextAfterSelection={(selectedItem) =>(
+          <Text>{selectedItem}</Text>
+          )}
+           
+          rowTextForSelectionTextAfterSelection={(item, index) =>(
+          <Text>{item}</Text>
+          )}
+          renderDropdownIcon={isOpened => {
+          return <FontAwesome style={styles.dropdownIcon} name={isOpened ? 'chevron-up' : 'chevron-down'} />;
+          }}
+          defaultButtonText="Select a county"
+          search
+          searchPlaceHolder="Search a county"
+          renderSearchInputLeftIcon={() => {
+            return <FontAwesome name={'search'} style={styles.dropdownSearchicon} />;
+          }}
         />
       </SafeAreaView>
       
-      // <SafeAreaView >
-      //   <FlatList
-      //   data={Data.bomi} // Iterate through each county's aspirants
-      //   renderItem={({ item: aspirant }) => (
-      //     <Senators image={aspirant.photo} name={aspirant.aspirant} party={aspirant.party} />
-      //   )}
-      //   keyExtractor={(aspirant, index) => aspirant.county + aspirant.number + index}
-      //   // Use a unique key for each aspirant
-      //   />
-      // </SafeAreaView>
+      // 
     );
 }
 
@@ -61,6 +71,20 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     padding: 20,
+  },
+  dropdownListTitle:{
+    padding: 20,
+    justifyContent: 'center',
+    color: 'red',
+    backgroundColor: 'red'
+  },
+  dropdownIcon:{
+    color: '#002368',
+    fontSize: 15
+  },
+  dropdownSearchicon: {
+    color: '#002368',
+    fontSize: 15
   },
   dropdownHeader: {
     flexDirection: 'row',

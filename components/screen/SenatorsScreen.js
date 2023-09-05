@@ -1,43 +1,51 @@
-import React from "react";
-import {Text, StyleSheet, SafeAreaView} from 'react-native';
+import React, { useState } from "react";
+import {Text, StyleSheet, SafeAreaView, FlatList, View} from 'react-native';
 // import { NavigationContainer } from '@react-navigation/native';
-// import { SenatorsData } from "../data/SenatorsData";
-import { Data } from "../data/SenatorsData.js";
 import SelectDropdown from "react-native-select-dropdown";
 import FontAwesome from '@expo/vector-icons/FontAwesome';
-
-const counties = ["Bomi", "Bong", 'Gbarpolu', 'Grand Bassa', 'Grand Cape Mount', 'Grand Gedeh', 'Grand Kru', 'Lofa', 'Margibi', 'Maryland', 'Montserrado', 'Nimba', 'Rivercess', 'River Gee', 'Sinoe', ];
-
-//  const ListView = ({list})=>(
-//   <TouchableOpacity>
-//     <Text>{list}</Text>
-//   </TouchableOpacity>
-// )
-    
-
-const Senators = ({name, party, image}) => (
+import data from "../data/senatorsData.json"
+// COUNTIES ARRAY 
+const counties = ['Bomi', 'Bong', 'Gbarpolu', 'Grand Bassa', 'Grand CapeMount', 'Grand Gedeh', 'Grand Kru', 'Lofa', 'Margibi', 'Maryland', 'Montserrado', 'Nimba', 'Rivercess', 'River Gee', 'Sinoe', ];
+    // SENATORS LIST 
+const Item = ({name, party}) => (
   <View style= {styles.list}>
-    <Image style={styles.image} source={image} />
+    {/* <Image style={styles.image} source={image} /> */}
     <View style={styles.infoCard}>
       <Text style= {styles.name}>{name}</Text>
       <Text style={styles.party}>{party}</Text>
     </View>
     
   </View>
-) 
+)
+// COUNTY STATS 
+const Stats = ({title, number}) =>{
+  return(
+    <View style={styles.voterStats}>
+        <Text style={styles.votersTitle}>{title}</Text>
+        <Text style={styles.votersNumber}>{number}</Text>
+    </View>
+  )
+ 
+} 
+
 
 function SenatorsScreen() {
-   
+  // let selectedCounty;
+  const [selectedCounty, setSelectedCounty] = useState([]);
     return (
       <SafeAreaView>
         <SelectDropdown 
           style={styles.dropdownListTitle}
           data={counties}
           onSelect = {(selectedItem) =>{
-           console.log("This is the data: ", Data);
-           <Text>{selectedItem}</Text>
+            convertedToLower = selectedItem.toLowerCase();
+            data.forEach(element => {
+            // selectedCounty = element[convertedToLower];
+            setSelectedCounty(element[convertedToLower])
+            console.log("The Data: ", selectedCounty);
+            });
           }}
-            
+
           buttonTextAfterSelection={(selectedItem) =>(
           <Text>{selectedItem}</Text>
           )}
@@ -55,14 +63,35 @@ function SenatorsScreen() {
             return <FontAwesome name={'search'} style={styles.dropdownSearchicon} />;
           }}
         />
+        
+        {/* <View>
+          <Text>Registered Voters: 2000</Text>
+        </View> */}
+        {/* <View style ={styles.votersStatsView}>
+            {selectedCounty.votersStats.map((item, index) => (
+              
+              <View key={index}>
+                <Stats title={item.title} number={item.number}/>
+              </View>
+            ))
+            }
+          </View> */}
+        <View>
+          <FlatList
+            data={selectedCounty}
+            renderItem={({item}) => <Item name={item.aspirant} party={item.party} />}
+            keyExtractor={item => item.number}
+          />
+        </View>
       </SafeAreaView>
       
-      // 
     );
+    
+    
 }
 
   
-  export default SenatorsScreen
+export default SenatorsScreen;
 
 
 
@@ -140,7 +169,42 @@ const styles = StyleSheet.create({
       infoCard:{
         flexDirection: 'column',
         marginLeft: 18
-      } 
+      } ,
+       // Voters FlatList Styles 
+    voterStats:{
+      width: 126,
+      shadowColor: 'black',
+      shadowOffset: {width: 0, height: 2},
+      shadowRadius: 4,
+      shadowOpacity: 0.26,
+      elevation: 4,
+      backgroundColor: 'white',
+      padding: 10,
+      marginVertical: 10,
+      marginHorizontal: 4,
+      borderRadius: 8,
+      // flexDirection: 'row',   
+    },
+    votersStatsView:{
+      flexDirection: 'row',
+      flexWrap: 'wrap',
+      marginTop: 40,
+      justifyContent: 'center'
+    },
+    votersTitle: {
+      fontSize: 15,
+      textAlign: 'center',
+      color: '#002368',
+      fontWeight: '700'
+
+
+    },
+    votersNumber:{
+      fontSize: 22,
+      textAlign: 'center',
+      color: '#c0032c',
+      fontWeight: '500'
+    },
     
 });
 

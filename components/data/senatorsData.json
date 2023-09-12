@@ -1,26 +1,6 @@
 [
     {
         "bomi": [
-            {
-                
-                "votersStats": [
-                    {
-                        "centers": "27"
-                    },
-                    {
-                        "title": "allVoters",
-                        "number": "63,112"
-                    },
-                    {
-                        "title": "male",
-                        "number": "32,428"
-                    },
-                    {
-                        "title": "female",
-                        "number": "30,684"
-                    }
-                ]
-            },
           
 
             {
@@ -70,26 +50,7 @@
             }
         ],
         "bong": [
-            {
-                 
-                "votersStats": [
-                    {
-                        "centers": "70"
-                    },
-                    {
-                        "title": "allVoters",
-                        "number": "234,787"
-                    },
-                    {
-                        "title": "male",
-                        "number": "114,632"
-                    },
-                    {
-                        "title": "female",
-                        "number": "120,155"
-                    }
-                ]
-            },
+           
             {
                 "aspirant": "Amos D.S. Barbu, Jr",
                 "photo": "",
@@ -182,26 +143,7 @@
             }
         ],
         "gbarpolu": [
-            {
-                 
-                "votersStats": [
-                    {
-                        "centers": "75"
-                    },
-                    {
-                        "title": "allVoters",
-                        "number": "50,615"
-                    },
-                    {
-                        "title": "male",
-                        "number": "28,349"
-                    },
-                    {
-                        "title": "female",
-                        "number": "22,266"
-                    }
-                ]
-            },
+           
             {
                 "aspirant": "John K. Benda, Sr",
                 "photo": "",
@@ -286,29 +228,6 @@
         ],
         "grand bassa": [
             {
-                 
-                "votersStats": [
-                    {
-                        "centers": "101",
-                        "allVoters": "158,463",
-                        "male": "79,222",
-                        "female": "79,241"
-                    },
-                    {
-                        "title": "allVoters",
-                        "number": "158,463"
-                    },
-                    {
-                        "title": "male",
-                        "number": "79,222"
-                    },
-                    {
-                        "title": "female",
-                        "number": "79,241"
-                    }
-                ]
-            },
-            {
                 "aspirant": "Janjay Baikpeh",
                 "photo": "",
                 "number": "CN-000376",
@@ -355,26 +274,7 @@
             }
         ],
         "grand capemount": [
-            {
-                 
-                "votersStats": [
-                    {
-                        "centers": "76"
-                    },
-                    {
-                        "title": "allVoters",
-                        "number": "86,529"
-                    },
-                    {
-                        "title": "male",
-                        "number": "46,053"
-                    },
-                    {
-                        "title": "female",
-                        "number": "40,476"
-                    }
-                ]
-            },
+            
             {
                 "aspirant": "Gayah W. Fahnbulleh",
                 "photo": "",
@@ -476,26 +376,7 @@
             }
         ],
         "grand gedeh": [
-            {
-                 
-                "votersStats": [
-                    {
-                        "centers": "78"
-                    },
-                    {
-                        "title": "allVoters",
-                        "number": "63,942"
-                    },
-                    {
-                        "title": "male",
-                        "number": "33,673"
-                    },
-                    {
-                        "title": "female",
-                        "number": "30,269"
-                    }
-                ]
-            },
+           
             {
                 "aspirant": "Cyrus S. Cooper, II",
                 "photo": "",
@@ -543,26 +424,7 @@
             }
         ],
         "grand kru": [
-            {
-                 
-                "votersStats": [
-                    {
-                        "centers": "57"
-                    },
-                    {
-                        "title": "allVoters",
-                        "number": "42,396"
-                    },
-                    {
-                        "title": "male",
-                        "number": "22,344"
-                    },
-                    {
-                        "title": "female",
-                        "number": "20,052"
-                    }
-                ]
-            },
+            
             {
                 "aspirant": "Albert Tubge Chie",
                 "photo": "",
@@ -583,26 +445,7 @@
             }
         ],
         "lofa": [
-            {
-                 
-                "votersStats": [
-                    {
-                        "centers": "120"
-                    },
-                    {
-                        "title": "allVoters",
-                        "number": "177,129"
-                    },
-                    {
-                        "title": "male",
-                        "number": "85,301"
-                    },
-                    {
-                        "title": "female",
-                        "number": "91,828"
-                    }
-                ]
-            },
+           
             {
                 "aspirant": "Momo T. Cyrus",
                 "photo": "",
@@ -668,26 +511,7 @@
             }
         ],
         "margibi": [
-            {
-                 
-                "votersStats": [
-                    {
-                        "centers": "148"
-                    },
-                    {
-                        "title": "allVoters",
-                        "number": "185,301"
-                    },
-                    {
-                        "title": "male",
-                        "number": "91,623"
-                    },
-                    {
-                        "title": "female",
-                        "number": "93,678"
-                    }
-                ]
-            },
+           
             {
                 "aspirant": "Rev. Emmanuel J. Giddings",
                 "photo": "",
@@ -762,27 +586,7 @@
             }
         ],
         "maryland": [
-            {
-                 
-                "votersStats": [
-                    {
-                        "centers": "83"
-                    },
-                    {
-                        "title": "allVoters",
-                        "number": "67,600"
-                    },
-                    {
-                        "title": "male",
-                        "number": "33,544"
-                    },
-                    {
-                        "title": "female",
-                        "number": "34,056"
-                    }
-                    
-                ]
-            },
+            
             {
                 "aspirant": "William Phillip Anderson",
                 "photo": "",
@@ -857,26 +661,6 @@
             }
         ],
         "montserrado": [
-            {
-                 
-                "votersStats": [
-                    {
-                        "centers": "488"
-                    },
-                    {
-                        "title": "allVoters",
-                        "number": "901,162"
-                    },
-                    {
-                        "title": "male",
-                        "number": "444,113"
-                    },
-                    {
-                        "title": "female",
-                        "number": "457,049"
-                    }
-                ]
-            },
             {
                 "aspirant": "Saye M. Boyou",
                 "photo": "",

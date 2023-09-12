@@ -31,28 +31,31 @@ const Stats = ({title, number}) =>{
 
 function SenatorsScreen() {
   // let selectedCounty;
+  let countyStats;
   const [selectedCounty, setSelectedCounty] = useState([]);
+  // const [countyStats, setCountyStats] = useState([]);
     return (
       <SafeAreaView>
         <SelectDropdown 
           style={styles.dropdownListTitle}
           data={counties}
-          onSelect = {(selectedItem) =>{
+          onSelect = {(selectedItem) => {
             convertedToLower = selectedItem.toLowerCase();
             data.forEach(element => {
-            // selectedCounty = element[convertedToLower];
             setSelectedCounty(element[convertedToLower])
-            console.log("The Data: ", selectedCounty);
+            // console.log("The Data: ", selectedCounty);
+            
             });
+            
           }}
 
           buttonTextAfterSelection={(selectedItem) =>(
           <Text>{selectedItem}</Text>
           )}
            
-          rowTextForSelectionTextAfterSelection={(item, index) =>(
-          <Text>{item}</Text>
-          )}
+          // rowTextForSelectionTextAfterSelection={(item, index) =>(
+          // <Text>{item}</Text>
+          // )}
           renderDropdownIcon={isOpened => {
           return <FontAwesome style={styles.dropdownIcon} name={isOpened ? 'chevron-up' : 'chevron-down'} />;
           }}
@@ -68,15 +71,17 @@ function SenatorsScreen() {
           <Text>Registered Voters: 2000</Text>
         </View> */}
         {/* <View style ={styles.votersStatsView}>
-            {selectedCounty.votersStats.map((item, index) => (
-              
-              <View key={index}>
-                <Stats title={item.title} number={item.number}/>
-              </View>
-            ))
-            }
-          </View> */}
+          {countyStats && countyStats.map((item, index) => (
+                
+                <View key={index}>
+                  <Stats title={item.title} number={item.number}/>
+                </View>
+              ))
+          }
+        </View> */}
+          
         <View>
+          
           <FlatList
             data={selectedCounty}
             renderItem={({item}) => <Item name={item.aspirant} party={item.party} />}
@@ -171,40 +176,40 @@ const styles = StyleSheet.create({
         marginLeft: 18
       } ,
        // Voters FlatList Styles 
-    voterStats:{
-      width: 126,
-      shadowColor: 'black',
-      shadowOffset: {width: 0, height: 2},
-      shadowRadius: 4,
-      shadowOpacity: 0.26,
-      elevation: 4,
-      backgroundColor: 'white',
-      padding: 10,
-      marginVertical: 10,
-      marginHorizontal: 4,
-      borderRadius: 8,
-      // flexDirection: 'row',   
-    },
-    votersStatsView:{
-      flexDirection: 'row',
-      flexWrap: 'wrap',
-      marginTop: 40,
-      justifyContent: 'center'
-    },
-    votersTitle: {
-      fontSize: 15,
-      textAlign: 'center',
-      color: '#002368',
-      fontWeight: '700'
+    // voterStats:{
+    //   width: 126,
+    //   shadowColor: 'black',
+    //   shadowOffset: {width: 0, height: 2},
+    //   shadowRadius: 4,
+    //   shadowOpacity: 0.26,
+    //   elevation: 4,
+    //   backgroundColor: 'white',
+    //   padding: 10,
+    //   // marginVertical: 10,
+    //   marginHorizontal: 4,
+    //   borderRadius: 8,
+    //   // flexDirection: 'row',   
+    // },
+    // votersStatsView:{
+    //   flexDirection: 'row',
+    //   flexWrap: 'wrap',
+    //   // marginTop: 40,
+    //   justifyContent: 'center'
+    // },
+    // votersTitle: {
+    //   fontSize: 15,
+    //   textAlign: 'center',
+    //   color: '#002368',
+    //   fontWeight: '700'
 
 
-    },
-    votersNumber:{
-      fontSize: 22,
-      textAlign: 'center',
-      color: '#c0032c',
-      fontWeight: '500'
-    },
+    // },
+    // votersNumber:{
+    //   fontSize: 22,
+    //   textAlign: 'center',
+    //   color: '#c0032c',
+    //   fontWeight: '500'
+    // },
     
 });
 

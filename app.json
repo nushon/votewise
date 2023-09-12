@@ -34,9 +34,7 @@
       }
     },
     "owner": "nushon1",
-    "runtimeVersion": {
-      "policy": "appVersion"
-    },
+    "runtimeVersion": "1.0.0",
     "updates": {
       "url": "https://u.expo.dev/70dc5660-9ba5-45ef-b4a1-5a7c50d0b097"
     }

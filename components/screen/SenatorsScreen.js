@@ -3,7 +3,8 @@ import {Text, StyleSheet, SafeAreaView, FlatList, View} from 'react-native';
 // import { NavigationContainer } from '@react-navigation/native';
 import SelectDropdown from "react-native-select-dropdown";
 import FontAwesome from '@expo/vector-icons/FontAwesome';
-import data from "../data/senatorsData.json"
+import data from "../data/senatorsData.json";
+import statsData from "../data/CountyStats.json";
 // COUNTIES ARRAY 
 const counties = ['Bomi', 'Bong', 'Gbarpolu', 'Grand Bassa', 'Grand CapeMount', 'Grand Gedeh', 'Grand Kru', 'Lofa', 'Margibi', 'Maryland', 'Montserrado', 'Nimba', 'Rivercess', 'River Gee', 'Sinoe', ];
     // SENATORS LIST 
@@ -31,9 +32,9 @@ const Stats = ({title, number}) =>{
 
 function SenatorsScreen() {
   // let selectedCounty;
-  let countyStats;
+  // let countyStats;
   const [selectedCounty, setSelectedCounty] = useState([]);
-  // const [countyStats, setCountyStats] = useState([]);
+  const [countyStats, setCountyStats] = useState([]);
     return (
       <SafeAreaView>
         <SelectDropdown 
@@ -42,11 +43,11 @@ function SenatorsScreen() {
           onSelect = {(selectedItem) => {
             convertedToLower = selectedItem.toLowerCase();
             data.forEach(element => {
-            setSelectedCounty(element[convertedToLower])
-            // console.log("The Data: ", selectedCounty);
-            
+              setSelectedCounty(element[convertedToLower])
             });
-            
+            statsData.forEach(element =>{
+              setCountyStats(element[convertedToLower])
+            });
           }}
 
           buttonTextAfterSelection={(selectedItem) =>(
@@ -66,22 +67,17 @@ function SenatorsScreen() {
             return <FontAwesome name={'search'} style={styles.dropdownSearchicon} />;
           }}
         />
-        
-        {/* <View>
-          <Text>Registered Voters: 2000</Text>
-        </View> */}
-        {/* <View style ={styles.votersStatsView}>
-          {countyStats && countyStats.map((item, index) => (
-                
-                <View key={index}>
-                  <Stats title={item.title} number={item.number}/>
-                </View>
-              ))
-          }
-        </View> */}
-          
+       
+        <View style ={styles.votersStatsView}>
+          <FlatList
+            data={countyStats}
+            numColumns={2}
+            renderItem={({item}) => <Stats title={item.title} number={item.number} />}
+            keyExtractor={item => item.id}
+
+          />
+        </View>
         <View>
-          
           <FlatList
             data={selectedCounty}
             renderItem={({item}) => <Item name={item.aspirant} party={item.party} />}
@@ -176,41 +172,38 @@ const styles = StyleSheet.create({
         marginLeft: 18
       } ,
        // Voters FlatList Styles 
-    // voterStats:{
-    //   width: 126,
-    //   shadowColor: 'black',
-    //   shadowOffset: {width: 0, height: 2},
-    //   shadowRadius: 4,
-    //   shadowOpacity: 0.26,
-    //   elevation: 4,
-    //   backgroundColor: 'white',
-    //   padding: 10,
-    //   // marginVertical: 10,
-    //   marginHorizontal: 4,
-    //   borderRadius: 8,
-    //   // flexDirection: 'row',   
-    // },
-    // votersStatsView:{
-    //   flexDirection: 'row',
-    //   flexWrap: 'wrap',
-    //   // marginTop: 40,
-    //   justifyContent: 'center'
-    // },
-    // votersTitle: {
-    //   fontSize: 15,
-    //   textAlign: 'center',
-    //   color: '#002368',
-    //   fontWeight: '700'
+    voterStats:{
+      width: 126,
+      shadowColor: 'black',
+      shadowOffset: {width: 0, height: 2},
+      shadowRadius: 4,
+      shadowOpacity: 0.26,
+      elevation: 4,
+      backgroundColor: 'white',
+      padding: 10,
+      marginVertical: 5,
+      marginHorizontal: 4,
+      borderRadius: 8,
+      // flexDirection: 'row',   
+    },
+    votersStatsView:{
+      flexDirection: 'row',
+      flexWrap: 'wrap',
+      justifyContent: "center"
+    },
+    votersTitle: {
+      fontSize: 15,
+      textAlign: 'center',
+      color: '#002368',
+      fontWeight: '700'
 
 
-    // },
-    // votersNumber:{
-    //   fontSize: 22,
-    //   textAlign: 'center',
-    //   color: '#c0032c',
-    //   fontWeight: '500'
-    // },
+    },
+    votersNumber:{
+      fontSize: 22,
+      textAlign: 'center',
+      color: '#c0032c',
+      fontWeight: '500'
+    }
     
 });
-
-// export default SelectCounty;

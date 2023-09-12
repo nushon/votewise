@@ -661,6 +661,7 @@
             }
         ],
         "montserrado": [
+            
             {
                 "aspirant": "Saye M. Boyou",
                 "photo": "",
@@ -736,26 +737,6 @@
         ],
         "nimba": [
             {
-                 
-                "votersStats": [
-                    {
-                        "centers": "192"
-                    },
-                    {
-                        "title": "allVoters",
-                        "number": "307,254"
-                    },
-                    {
-                        "title": "male",
-                        "number": "151,917"
-                    },
-                    {
-                        "title": "female",
-                        "number": "155,337"
-                    }
-                ]
-            },
-            {
                 "aspirant": "Roland G. Duo",
                 "photo": "",
                 "number": "CN-000868",
@@ -821,26 +802,6 @@
         ],
         "river gee": [
             {
-                 
-                "votersStats": [
-                    {
-                        "centers": "56"
-                    },
-                    {
-                        "title": "allVoters",
-                        "number": "37,807"
-                    },
-                    {
-                        "title": "male",
-                        "number": "19,751"
-                    },
-                    {
-                        "title": "female",
-                        "number": "18,056"
-                    }
-                ]
-            },
-            {
                 "aspirant": "Chelle S. Noring",
                 "photo": "",
                 "number": "CN-000651",
@@ -888,26 +849,6 @@
         ],
         "rivercess": [
             {
-                 
-                "votersStats": [
-                    {
-                        "centers": "55"
-                    },
-                    {
-                        "title": "allVoters",
-                        "number": "39,941"
-                    },
-                    {
-                        "title": "male",
-                        "number": "20,693"
-                    },
-                    {
-                        "title": "female",
-                        "number": "19,248"
-                    }
-                ]
-            },
-            {
                 "aspirant": "Jay Jonathan Banney",
                 "photo": "",
                 "number": "CN-000869",
@@ -954,26 +895,6 @@
             }
         ],
         "sinoe": [
-            {
-                 
-                "votersStats": [
-                    {
-                        "centers": "81"
-                    },
-                    {
-                        "title": "allVoters",
-                        "number": "55,579"
-                    },
-                    {
-                        "title": "male",
-                        "number": "30,717"
-                    },
-                    {
-                        "title": "female",
-                        "number": "24,862"
-                    }
-                ]
-            },
             {
                 "aspirant": "Crayton O. Duncan",
                 "photo": "",

@@ -2,161 +2,313 @@
     {
         "bomi": [
             {
-                "centers": "27"
+                "title": "Centers",
+                "number": 27,
+                "id": 0
             },
             {
-                "title": "allVoters",
-                "number": "63,112"
+                "title": "Voters",
+                "number": "63,112",
+                "id": 1
             },
             {
-                "title": "male",
-                "number": "32,428"
+                "title": "Male",
+                "number": "32,428",
+                "id": 2
             },
             {
-                "title": "female",
-                "number": "30,684"
+                "title": "Female",
+                "number": "30,684",
+                "id": 3
             }
         ],
         "bong": [
             {
-                "centers": "70"
+                "title": "Centers",
+                "number": 70,
+                "id": 4
             },
             {
-                "title": "allVoters",
-                "number": "234,787"
+                "title": "Voters",
+                "number": "234,787",
+                "id": 5
             },
             {
-                "title": "male",
-                "number": "114,632"
+                "title": "Male",
+                "number": "114,632",
+                "id": 6
             },
             {
-                "title": "female",
-                "number": "120,155"
+                "title": "Female",
+                "number": "120,155",
+                "id": 7
             }
         ],
         "gbarpolu": [
             {
-                "centers": "75"
+                "title": "Centers",
+                "number": 75,
+                "id": 8
             },
             {
-                "title": "allVoters",
-                "number": "50,615"
+                "title": "Voters",
+                "number": "50,615",
+                "id": 9
             },
             {
-                "title": "male",
-                "number": "28,349"
+                "title": "Male",
+                "number": "28,349",
+                "id": 10
             },
             {
-                "title": "female",
-                "number": "22,266"
+                "title": "Female",
+                "number": "22,266",
+                "id": 11
             }
         ],
         "grand bassa": [
             {
-                "centers": "101",
-                "allVoters": "158,463",
-                "male": "79,222",
-                "female": "79,241"
+                "title": "Centers",
+                "number": 101,
+                "id": 12
             },
             {
-                "title": "allVoters",
-                "number": "158,463"
+                "title": "Voters",
+                "number": "158,463",
+                "id": 13
             },
             {
-                "title": "male",
-                "number": "79,222"
+                "title": "Male",
+                "number": "79,222",
+                "id": 14
             },
             {
-                "title": "female",
-                "number": "79,241"
+                "title": "Female",
+                "number": "79,241",
+                "id": 15
             }
         ],
         "grand capemount": [
             {
-                "centers": "76"
+                "title": "Centers",
+                "number": 76,
+                "id": 16
             },
             {
-                "title": "allVoters",
-                "number": "86,529"
+                "title": "Voters",
+                "number": "86,529",
+                "id": 17
             },
             {
-                "title": "male",
-                "number": "46,053"
+                "title": "Male",
+                "number": "46,053",
+                "id": 18
             },
             {
-                "title": "female",
-                "number": "40,476"
+                "title": "Female",
+                "number": "40,476",
+                "id": 19
             }
         ],
         "grand kru": [
             {
-                "centers": "57"
+                "title": "Centers",
+                "number": 57,
+                "id": 20
             },
             {
-                "title": "allVoters",
-                "number": "42,396"
+                "title": "Voters",
+                "number": "42,396",
+                "id": 21
             },
             {
-                "title": "male",
-                "number": "22,344"
+                "title": "Male",
+                "number": "22,344",
+                "id": 22
             },
             {
-                "title": "female",
-                "number": "20,052"
+                "title": "Female",
+                "number": "20,052",
+                "id": 23
             }
         ],
           
         "lofa": [
             {
-                "centers": "120"
+                "title": "Centers",
+                "number": 120,
+                "id": 24
             },
             {
-                "title": "allVoters",
-                "number": "177,129"
+                "title": "Voters",
+                "number": "177,129",
+                "id": 25
             },
             {
-                "title": "male",
-                "number": "85,301"
+                "title": "Male",
+                "number": "85,301",
+                "id": 26
             },
             {
-                "title": "female",
-                "number": "91,828"
+                "title": "Female",
+                "number": "91,828",
+                "id": 27
             }
         ],
         "margibi": [
             {
-                "centers": "148"
+                "title": "Centers",
+                "number": 148,
+                "id": 28
             },
             {
-                "title": "allVoters",
-                "number": "185,301"
+                "title": "Voters",
+                "number": "185,301",
+                "id": 29
             },
             {
-                "title": "male",
-                "number": "91,623"
+                "title": "Male",
+                "number": "91,623",
+                "id": 30
             },
             {
-                "title": "female",
-                "number": "93,678"
+                "title": "Female",
+                "number": "93,678",
+                "id": 31
             }
         ],
         "maryland": [
             {
-                "centers": "83"
+                "title": "Centers",
+                "number": 83,
+                "id": 32
+            },
+            {
+                "title": "Voters",
+                "number": "67,600",
+                "id": 33
+            },
+            {
+                "title": "Male",
+                "number": "33,544",
+                "id": 34
+            },
+            {
+                "title": "Female",
+                "number": "34,056",
+                "id": 35
+            }
+            
+        ],
+        "montserrado": [
+            {
+                "title":"Centers",
+                "number": 488,
+                "id": 36
+            },
+            {
+                "title": "Voters",
+                "number": "901,162",
+                "id": 37
+            },
+            {
+                "title": "Male",
+                "number": "444,113",
+                "id": 38
+            },
+            {
+                "title": "Female",
+                "number": "457,049",
+                "id": 39
+            }
+        ],
+        "nimba": [
+            {
+                "title": "Centers",
+                "number": 192,
+                "id": 40
             },
             {
                 "title": "allVoters",
-                "number": "67,600"
+                "number": "307,254",
+                "id": 41
             },
             {
-                "title": "male",
-                "number": "33,544"
+                "title": "Male",
+                "number": "151,917",
+                "id": 42
             },
             {
-                "title": "female",
-                "number": "34,056"
+                "title": "Female",
+                "number": "155,337",
+                "id": 43
             }
-            
+        ],
+        "river gee": [
+            {
+                "title": "Centers",
+                "number": 56,
+                "id": 44
+            },
+            {
+                "title": "Voters",
+                "number": "37,807",
+                "id": 45
+            },
+            {
+                "title": "Male" ,
+                "number": "19,751",
+                "id": 46
+            },
+            {
+                "title": "Female",
+                "number": "18,056",
+                "id": 47
+            }
+        ],
+        "rivercess": [
+            {
+                "title": "Centers",
+                "number": 55,
+                "id": 48
+            },
+            {
+                "title": "Voters",
+                "number": "39,941",
+                "id": 49
+            },
+            {
+                "title": "Male",
+                "number": "20,693",
+                "id": 50
+            },
+            {
+                "title": "Female",
+                "number": "19,248",
+                "id": 51
+            }
+        ],
+        "sinoe": [
+            {
+                "title": "Centers",
+                "number": 81,
+                "id": 52
+            },
+            {
+                "title": "Voters",
+                "number": "55,579",
+                "id": 53
+            },
+            {
+                "title": "Male",
+                "number": "30,717",
+                "id": 54
+            },
+            {
+                "title": "Female",
+                "number": "24,862",
+                "id": 55
+            }
         ]
 
 

@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import {Text, StyleSheet, SafeAreaView, FlatList, View} from 'react-native';
+import {Text, StyleSheet, SafeAreaView, FlatList, View, ScrollView} from 'react-native';
 // import { NavigationContainer } from '@react-navigation/native';
 import SelectDropdown from "react-native-select-dropdown";
 import FontAwesome from '@expo/vector-icons/FontAwesome';
@@ -36,7 +36,8 @@ function SenatorsScreen() {
   const [selectedCounty, setSelectedCounty] = useState([]);
   const [countyStats, setCountyStats] = useState([]);
     return (
-      <SafeAreaView>
+      <ScrollView>
+        <SafeAreaView>
         <SelectDropdown 
           style={styles.dropdownListTitle}
           data={counties}
@@ -85,6 +86,8 @@ function SenatorsScreen() {
           />
         </View>
       </SafeAreaView>
+      </ScrollView>
+      
       
     );
     
